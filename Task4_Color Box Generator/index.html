@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 4 — Color Box Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="color-container">
+    <h1>🎨 Color Box Generator</h1>
+    <p class="subtitle">Enter colors in each slot and generate colored boxes</p>
+
+    <!-- BOM info bar (Bonus) -->
+    <div class="bom-bar">
+      <div class="bom-item">
+        <div class="bom-label">Screen W</div>
+        <div class="bom-value" id="bom-width">—</div>
+      </div>
+      <div class="bom-item">
+        <div class="bom-label">Screen H</div>
+        <div class="bom-value" id="bom-height">—</div>
+      </div>
+      <div class="bom-item">
+        <div class="bom-label">Window W</div>
+        <div class="bom-value" id="bom-win-w">—</div>
+      </div>
+      <div class="bom-item">
+        <div class="bom-label">Window H</div>
+        <div class="bom-value" id="bom-win-h">—</div>
+      </div>
+      <div class="bom-item">
+        <div class="bom-label">Browser</div>
+        <div class="bom-value" id="bom-browser">—</div>
+      </div>
+      <div class="bom-item">
+        <div class="bom-label">Language</div>
+        <div class="bom-value" id="bom-lang">—</div>
+      </div>
+    </div>
+
+    <!-- 3 color input slots -->
+    <div class="inputs-grid">
+      <!-- Slot 1 -->
+      <div class="color-input-group">
+        <label for="color1">Color Slot 1</label>
+        <div class="color-row">
+          <input type="color" id="picker1" value="#ff6b6b" onchange="syncPickerToText(1)" />
+          <input type="text"  id="color1"  placeholder="red / #ff0000" oninput="syncTextToPicker(1)" />
+        </div>
+      </div>
+      <!-- Slot 2 -->
+      <div class="color-input-group">
+        <label for="color2">Color Slot 2</label>
+        <div class="color-row">
+          <input type="color" id="picker2" value="#4ecdc4" onchange="syncPickerToText(2)" />
+          <input type="text"  id="color2"  placeholder="blue / #0000ff" oninput="syncTextToPicker(2)" />
+        </div>
+      </div>
+      <!-- Slot 3 -->
+      <div class="color-input-group">
+        <label for="color3">Color Slot 3</label>
+        <div class="color-row">
+          <input type="color" id="picker3" value="#ffe66d" onchange="syncPickerToText(3)" />
+          <input type="text"  id="color3"  placeholder="green / #00ff00" oninput="syncTextToPicker(3)" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="btn-group">
+      <button class="btn btn-add"   onclick="addColorBoxes()">➕ Add Color Boxes</button>
+      <button class="btn btn-clear" onclick="clearAllBoxes()">🗑 Clear All Boxes</button>
+    </div>
+
+    <!-- Boxes display area -->
+    <p class="section-title">🎁 Generated Boxes</p>
+    <div id="boxes-area"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

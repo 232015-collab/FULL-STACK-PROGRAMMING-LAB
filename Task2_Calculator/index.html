@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 2 — Interactive Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="calc-wrapper">
+    <h1>🔢 Calculator</h1>
+    <p class="subtitle">Supports +  −  ×  ÷  with input validation</p>
+
+    <!-- Number inputs -->
+    <div class="input-row">
+      <div class="input-group">
+        <label for="num1">First Number</label>
+        <input type="number" id="num1" placeholder="e.g. 10" />
+      </div>
+      <div class="input-group">
+        <label for="num2">Second Number</label>
+        <input type="number" id="num2" placeholder="e.g. 5" />
+      </div>
+    </div>
+
+    <!-- Operation selector -->
+    <div class="op-row">
+      <label for="operation">Operation</label>
+      <select id="operation" class="op-select">
+        <option value="+">➕ Addition ( + )</option>
+        <option value="-">➖ Subtraction ( − )</option>
+        <option value="*">✖️ Multiplication ( × )</option>
+        <option value="/">➗ Division ( ÷ )</option>
+      </select>
+    </div>
+
+    <!-- Buttons -->
+    <button class="btn btn-calc"  onclick="compute()">= Calculate</button>
+    <button class="btn btn-clear" onclick="clearAll()">🗑 Clear</button>
+
+    <!-- Result box (background changes based on positive / negative) -->
+    <div id="result-box"></div>
+
+    <!-- Calculation history -->
+    <div id="history-section" style="display:none;">
+      <p class="history-title">📜 Recent Calculations</p>
+      <ul id="history-list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

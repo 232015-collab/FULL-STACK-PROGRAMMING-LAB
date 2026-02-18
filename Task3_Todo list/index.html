@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 3 — To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="todo-container">
+    <h1>📋 To-Do List</h1>
+    <p class="subtitle">3 fixed tasks — mark complete or remove them</p>
+
+    <!-- Stats bar -->
+    <div class="stats">
+      <div class="stat-pill">Total: <span id="stat-total">3</span></div>
+      <div class="stat-pill">Done: <span id="stat-completed">0</span></div>
+      <div class="stat-pill">Active: <span id="stat-active">3</span></div>
+    </div>
+
+    <!-- Task cards rendered by script.js -->
+    <div id="task-area"></div>
+
+    <!-- Bottom actions -->
+    <div class="bottom-btns">
+      <button class="btn-bottom btn-style-all" onclick="styleAllTasks()">🎨 Style All Tasks</button>
+      <button class="btn-bottom btn-reset-all" onclick="resetAll()">🔄 Reset All</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
