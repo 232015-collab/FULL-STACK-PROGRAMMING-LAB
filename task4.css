@@ -1,0 +1,221 @@
+/* ===== RESET & BASE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0a0a1a, #1a1035, #0d1b2a);
+    color: white;
+    min-height: 100vh;
+}
+
+/* ===== WRAPPER ===== */
+.main-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.header-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #34d399;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 20px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(90deg, #34d399, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+}
+
+.header p {
+    font-size: 17px;
+    opacity: 0.7;
+}
+
+.header code {
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    -webkit-text-fill-color: #34d399;
+}
+
+/* ===== STATS SECTION ===== */
+.stats-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 35px 70px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+}
+
+.stat-box h2 {
+    font-size: 52px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #34d399, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    font-size: 15px;
+    opacity: 0.7;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* ===== COURSES SECTION ===== */
+.courses-section {
+    margin-bottom: 40px;
+}
+
+/* ===== COURSES GRID ===== */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* ===== COURSE CARD ===== */
+.course-card {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: default;
+    animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.course-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.course-card:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.course-card:nth-child(3) {
+    animation-delay: 0.25s;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    border-color: rgba(52, 211, 153, 0.4);
+}
+
+.course-icon {
+    font-size: 40px;
+    margin-bottom: 18px;
+    display: block;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+}
+
+.course-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.course-tag {
+    display: inline-block;
+    background: rgba(52, 211, 153, 0.15);
+    color: #34d399;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 16px;
+    border-radius: 50px;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== DUPLICATE NOTE ===== */
+.duplicate-note {
+    display: flex;
+    justify-content: center;
+}
+
+.note-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(234, 179, 8, 0.08);
+    border: 1px solid rgba(234, 179, 8, 0.25);
+    border-radius: 16px;
+    padding: 18px 28px;
+    backdrop-filter: blur(10px);
+    max-width: 600px;
+}
+
+.note-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.note-card p {
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.note-card code {
+    background: rgba(234, 179, 8, 0.15);
+    color: #fbbf24;
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+}

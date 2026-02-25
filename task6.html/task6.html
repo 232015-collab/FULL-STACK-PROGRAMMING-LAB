@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ES6 Combined Concepts - Class, Set, Map and Promise all working together">
+    <title>Student Data Saver | ES6 Combined</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="task6.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <header class="header">
+            <div class="header-badge">ES6 Lab — Task 6</div>
+            <h1>Student Data Saver</h1>
+            <p>Combining <code>Class</code> + <code>Set</code> + <code>Map</code> + <code>Promise</code></p>
+        </header>
+
+        <!-- Concepts used -->
+        <section class="concepts-section">
+            <div class="concept-pill">🏛️ ES6 Class</div>
+            <div class="concept-pill">🔒 Set</div>
+            <div class="concept-pill">🗺️ Map</div>
+            <div class="concept-pill">⏳ Promise</div>
+        </section>
+
+        <!-- Save status -->
+        <section class="status-section">
+            <div class="status-card" id="statusCard">
+                <div class="spinner" id="spinner"></div>
+                <p class="status-text" id="statusText">Saving student data…</p>
+            </div>
+        </section>
+
+        <!-- Result -->
+        <section class="result-section" id="resultSection">
+            <div class="success-banner" id="successBanner"></div>
+            <div id="studentContainer" class="student-list"></div>
+        </section>
+
+    </div>
+
+    <script src="../task6.js"></script>
+</body>
+
+</html>
