@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 5 — Form Validation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="form-container">
+    <h1>📝 Registration</h1>
+    <p class="subtitle">All fields are required and validated individually</p>
+
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">👤 Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name"
+             oninput="onNameChange()" />
+      <div class="error-msg" id="name-msg"></div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">📧 Email Address</label>
+      <input type="text" id="email" placeholder="example@email.com"
+             oninput="onEmailChange()" />
+      <div class="error-msg" id="email-msg"></div>
+    </div>
+
+    <!-- Age -->
+    <div class="form-group">
+      <label for="age">🎂 Age  <span style="opacity:0.5;font-size:0.7rem;">(18–60)</span></label>
+      <input type="number" id="age" placeholder="Enter your age"
+             oninput="onAgeChange()" min="1" max="120" />
+      <div class="error-msg" id="age-msg"></div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">🔒 Password <span style="opacity:0.5;font-size:0.7rem;">(min 6 chars)</span></label>
+      <input type="password" id="password" placeholder="Create a password"
+             oninput="onPasswordChange()" />
+      <!-- Password strength bar -->
+      <div class="strength-bar-wrap">
+        <div class="strength-bar" id="strength-bar"></div>
+      </div>
+      <div class="error-msg" id="password-msg"></div>
+    </div>
+
+    <!-- Submit -->
+    <button class="btn-submit" onclick="handleSubmit()">🚀 Register Now</button>
+    <span class="reset-link" onclick="resetForm()">Reset form</span>
+
+    <!-- Success message (shown after valid submission) -->
+    <div id="success-box">
+      <div class="success-icon">🎉</div>
+      <div class="success-title">Registration Successful!</div>
+      <div class="success-detail">
+        Welcome, <span class="success-name" id="success-name"></span>!<br/>
+        Your account has been created successfully.
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
