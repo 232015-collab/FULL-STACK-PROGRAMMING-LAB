@@ -1,0 +1,76 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 40px;
+  width: 480px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+h1 { text-align: center; color: #11998e; margin-bottom: 8px; font-size: 24px; }
+.hint { text-align: center; color: #999; font-size: 13px; margin-bottom: 24px; }
+
+#sortList { list-style: none; }
+
+#sortList li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #f8fffe;
+  border: 2px solid #d0f0e8;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  cursor: grab;
+  transition: all 0.2s;
+  user-select: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+#sortList li:hover {
+  border-color: #11998e;
+  background: #e8faf5;
+  transform: scale(1.01);
+}
+
+#sortList li.dragging {
+  opacity: 0.4;
+  border: 2px dashed #11998e;
+  cursor: grabbing;
+  background: #e8faf5;
+}
+
+#sortList li.drag-over {
+  border-color: #38ef7d;
+  background: #d4fae8;
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(17,153,142,0.3);
+}
+
+.handle { font-size: 20px; color: #ccc; }
+.rank { font-size: 18px; }
+
+.order-display {
+  margin-top: 20px;
+  padding: 14px;
+  background: #f0fdf8;
+  border-radius: 8px;
+  border: 1px solid #d0f0e8;
+  font-size: 13px;
+  color: #555;
+  text-align: center;
+}
+
+.order-display strong { color: #11998e; }

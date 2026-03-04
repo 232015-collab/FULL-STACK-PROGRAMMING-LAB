@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 8 – jQuery Quiz Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="quiz-card">
+    <h1>🧠 jQuery Quiz Game</h1>
+
+    <div id="quizScreen">
+      <div class="progress-bar-wrap">
+        <div id="progressBar"></div>
+      </div>
+      <div class="question-info">
+        <span id="qNum">Question 1 of 8</span>
+        <span id="qScore">Score: 0</span>
+      </div>
+      <div id="questionText"></div>
+      <div class="options"></div>
+      <div id="feedbackMsg"></div>
+      <div class="nav-btns">
+        <button id="nextBtn">Next Question →</button>
+      </div>
+    </div>
+
+    <div id="scoreScreen">
+      <span class="emoji">🏆</span>
+      <h2>Quiz Complete!</h2>
+      <div class="score-circle" id="scoreCircle">0/8</div>
+      <p id="scoreMsg"></p>
+      <button id="retryBtn">🔁 Try Again</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

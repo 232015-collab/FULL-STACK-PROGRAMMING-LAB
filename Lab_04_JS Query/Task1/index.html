@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 1 - Dynamic List Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="wrapper">
+    <header class="page-header">
+      <h1>Dynamic List Manager</h1>
+      <p>Add items to the list and remove them using the Delete button.</p>
+    </header>
+
+    <div class="input-row">
+      <input type="text" id="itemInput" placeholder="Type an item and press Add or Enter..." />
+      <button id="addBtn">Add Item</button>
+    </div>
+
+    <div class="list-meta">
+      <span id="itemCount">0 items</span>
+      <button id="clearAll">Clear All</button>
+    </div>
+
+    <ul id="itemList">
+      <li class="empty-state" id="emptyMsg">No items added yet. Start by adding one above.</li>
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

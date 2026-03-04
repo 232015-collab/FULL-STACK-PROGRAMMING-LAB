@@ -1,0 +1,214 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #111318;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 24px 64px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #fff;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.page-header h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.4px;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* ---- Two-column layout ---- */
+.gallery-layout {
+  display: flex;
+  gap: 0;
+  width: 100%;
+  max-width: 1100px;
+  background: #1c1f26;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+}
+
+/* ---- Thumbnail panel (left) ---- */
+.thumbnail-panel {
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background: #13151b;
+  border-right: 1px solid #2a2d36;
+  overflow-y: auto;
+}
+
+.thumb-item {
+  cursor: pointer;
+  border-bottom: 1px solid #2a2d36;
+  border-left: 3px solid transparent;
+  transition: border-left-color 0.2s, background 0.2s;
+  position: relative;
+}
+
+.thumb-item:hover {
+  background: #1e2130;
+  border-left-color: #4a6cf7;
+}
+
+.thumb-item.active {
+  border-left-color: #4a6cf7;
+  background: #1e2130;
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  display: block;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.thumb-item:hover img,
+.thumb-item.active img {
+  opacity: 1;
+}
+
+.thumb-label {
+  display: block;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #9ca3af;
+  letter-spacing: 0.3px;
+  transition: color 0.2s;
+}
+
+.thumb-item.active .thumb-label {
+  color: #c7d2fe;
+}
+
+/* ---- Main panel (right) ---- */
+.main-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.main-frame {
+  position: relative;
+  flex: 1;
+  background: #0d0f14;
+  min-height: 460px;
+}
+
+.main-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.main-img.active {
+  display: block;
+}
+
+/* Caption overlay on image */
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px 28px 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#captionText {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.4px;
+}
+
+#counterText {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Controls bar */
+.main-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #13151b;
+  border-top: 1px solid #2a2d36;
+}
+
+.main-controls button {
+  padding: 10px 26px;
+  background: #23273a;
+  color: #d1d5db;
+  border: 1px solid #2e3347;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.main-controls button:hover {
+  background: #4a6cf7;
+  border-color: #4a6cf7;
+  color: #fff;
+}
+
+.progress-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2e3347;
+  cursor: pointer;
+  border: none;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.dot.active {
+  background: #4a6cf7;
+  transform: scale(1.45);
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .gallery-layout { flex-direction: column; }
+  .thumbnail-panel { width: 100%; flex-direction: row; border-right: none; border-bottom: 1px solid #2a2d36; overflow-x: auto; overflow-y: hidden; }
+  .thumb-item { border-left: none; border-bottom: 3px solid transparent; flex-shrink: 0; width: 130px; }
+  .thumb-item.active { border-bottom-color: #4a6cf7; border-left-color: transparent; }
+  .thumb-item img { height: 80px; }
+}

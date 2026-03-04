@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 7 – Drag and Drop Sortable List</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="card">
+    <h1>🔀 Drag & Drop Sorter</h1>
+    <p class="hint">Drag items to reorder your priority list</p>
+
+    <ul id="sortList">
+      <li><span class="handle">⠿</span><span class="rank">🥇</span><span class="item-name">Learn HTML & CSS</span></li>
+      <li><span class="handle">⠿</span><span class="rank">🥈</span><span class="item-name">Master JavaScript</span></li>
+      <li><span class="handle">⠿</span><span class="rank">🥉</span><span class="item-name">Practice jQuery</span></li>
+      <li><span class="handle">⠿</span><span class="rank">4️⃣</span><span class="item-name">Build React Apps</span></li>
+      <li><span class="handle">⠿</span><span class="rank">5️⃣</span><span class="item-name">Learn Node.js</span></li>
+      <li><span class="handle">⠿</span><span class="rank">6️⃣</span><span class="item-name">Deploy to Cloud</span></li>
+    </ul>
+
+    <div class="order-display" id="orderDisplay"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

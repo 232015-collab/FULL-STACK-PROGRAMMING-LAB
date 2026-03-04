@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 4 - Tabbed Content with Smooth Scroll</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="site-header">
+    <h1>Tabbed Content with Smooth Scroll</h1>
+    <p>Click any tab below. The page scrolls to the content and the section animates in.</p>
+  </div>
+
+  <div class="tab-nav" id="tabNav">
+    <div class="tab-nav-inner">
+      <button class="tab-btn active" data-target="tab-overview">Overview</button>
+      <button class="tab-btn" data-target="tab-features">Features</button>
+      <button class="tab-btn" data-target="tab-jquery">jQuery Concepts</button>
+      <button class="tab-btn" data-target="tab-usage">Usage</button>
+      <button class="tab-btn" data-target="tab-resources">Resources</button>
+    </div>
+  </div>
+
+  <div class="content-area" id="contentArea">
+
+    <section class="tab-panel active" id="tab-overview">
+      <h2>Overview</h2>
+      <p>jQuery is a fast, small, and feature-rich JavaScript library. It simplifies HTML document traversal and manipulation, event handling, CSS animation, and Ajax with an easy-to-use API that works across browsers.</p>
+      <p>Originally released in 2006 by John Resig, jQuery became the most widely used JavaScript library on the web, powering millions of websites and web applications.</p>
+      <div class="info-grid">
+        <div class="info-card"><strong>Release Year</strong><span>2006</span></div>
+        <div class="info-card"><strong>Creator</strong><span>John Resig</span></div>
+        <div class="info-card"><strong>License</strong><span>MIT</span></div>
+        <div class="info-card"><strong>Version Used</strong><span>3.6.0</span></div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-features">
+      <h2>Features</h2>
+      <p>jQuery provides a comprehensive set of features for modern web development. The library abstracts away browser inconsistencies so you can focus on writing clean, concise code.</p>
+      <ul class="feature-list">
+        <li>DOM traversal and manipulation using CSS-style selectors</li>
+        <li>Cross-browser event handling with .on() and shorthand methods</li>
+        <li>Built-in effects: hide, show, fade, slide, and animate</li>
+        <li>CSS manipulation via .css(), .addClass(), .removeClass()</li>
+        <li>Method chaining to apply multiple operations in one statement</li>
+        <li>Simplified Ajax requests with $.get(), $.post(), and $.ajax()</li>
+        <li>Plugin ecosystem with thousands of community extensions</li>
+      </ul>
+    </section>
+
+    <section class="tab-panel" id="tab-jquery">
+      <h2>jQuery Concepts</h2>
+      <p>The core concept of jQuery is the selector-action pattern. You select an element and then perform an action on it. This is done through the <code>$()</code> function.</p>
+      <div class="concept-block">
+        <h3>DOM Manipulation</h3>
+        <p>Select and modify elements dynamically. Methods include .text(), .html(), .val(), .attr(), .append(), and .remove().</p>
+      </div>
+      <div class="concept-block">
+        <h3>Event Handling</h3>
+        <p>Attach event listeners to user interactions. The .on() method handles click, hover, keypress, submit, and more.</p>
+      </div>
+      <div class="concept-block">
+        <h3>Effects and Animations</h3>
+        <p>Animate elements smoothly using .fadeIn(), .fadeOut(), .slideToggle(), and .animate() for custom transitions.</p>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-usage">
+      <h2>Usage</h2>
+      <p>To include jQuery in your project, add the CDN link inside the head or just before the closing body tag:</p>
+      <pre><code>&lt;script src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;</code></pre>
+      <p>Then wrap all jQuery code inside the document-ready callback to ensure the DOM is fully loaded before executing:</p>
+      <pre><code>$(document).ready(function () {
+  // Your jQuery code here
+  $("button").on("click", function () {
+    $("p").fadeToggle(400);
+  });
+});</code></pre>
+    </section>
+
+    <section class="tab-panel" id="tab-resources">
+      <h2>Resources</h2>
+      <p>Use the following resources to deepen your understanding of jQuery and practice its features in real projects.</p>
+      <div class="resource-list">
+        <div class="resource-item">
+          <strong>Official Documentation</strong>
+          <span>api.jquery.com — full API reference for all jQuery methods.</span>
+        </div>
+        <div class="resource-item">
+          <strong>jQuery Learning Center</strong>
+          <span>learn.jquery.com — structured tutorials for beginners to advanced.</span>
+        </div>
+        <div class="resource-item">
+          <strong>W3Schools jQuery Tutorial</strong>
+          <span>Interactive examples covering all major jQuery features.</span>
+        </div>
+        <div class="resource-item">
+          <strong>JSONPlaceholder</strong>
+          <span>Free fake REST API for testing Ajax calls with jQuery.</span>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

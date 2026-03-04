@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 2 - Animated Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-header">
+    <h1>Animated Image Gallery</h1>
+    <p>Click a thumbnail to load the image. Use Previous and Next to navigate. Images fade in and out with dynamic captions.</p>
+  </div>
+
+  <div class="gallery-layout">
+
+    <!-- Thumbnail strip (left) -->
+    <div class="thumbnail-panel">
+      <div class="thumb-item active" data-index="0">
+        <img src="https://picsum.photos/seed/arch/200/130"   alt="Architecture" />
+        <span class="thumb-label">Architecture</span>
+      </div>
+      <div class="thumb-item" data-index="1">
+        <img src="https://picsum.photos/seed/forest/200/130" alt="Forest" />
+        <span class="thumb-label">Forest</span>
+      </div>
+      <div class="thumb-item" data-index="2">
+        <img src="https://picsum.photos/seed/coast/200/130"  alt="Coastline" />
+        <span class="thumb-label">Coastline</span>
+      </div>
+      <div class="thumb-item" data-index="3">
+        <img src="https://picsum.photos/seed/city99/200/130" alt="City" />
+        <span class="thumb-label">City</span>
+      </div>
+      <div class="thumb-item" data-index="4">
+        <img src="https://picsum.photos/seed/desert/200/130" alt="Desert" />
+        <span class="thumb-label">Desert</span>
+      </div>
+    </div>
+
+    <!-- Main display (right) -->
+    <div class="main-panel">
+      <div class="main-frame">
+        <img class="main-img active" src="https://picsum.photos/seed/arch/900/520"   alt="Architecture" />
+        <img class="main-img"        src="https://picsum.photos/seed/forest/900/520" alt="Forest" />
+        <img class="main-img"        src="https://picsum.photos/seed/coast/900/520"  alt="Coastline" />
+        <img class="main-img"        src="https://picsum.photos/seed/city99/900/520" alt="City" />
+        <img class="main-img"        src="https://picsum.photos/seed/desert/900/520" alt="Desert" />
+
+        <div class="image-overlay">
+          <span id="captionText">Architecture</span>
+          <span id="counterText">1 / 5</span>
+        </div>
+      </div>
+
+      <div class="main-controls">
+        <button id="prevBtn">Previous</button>
+        <div class="progress-dots" id="dotContainer"></div>
+        <button id="nextBtn">Next</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
