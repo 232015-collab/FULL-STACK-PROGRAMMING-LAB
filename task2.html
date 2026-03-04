@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="ShopES6 - Premium shopping store built with ES6 Classes, featuring cart management and live total">
+  <title>ShopES6 | Premium Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="task2.css">
+</head>
+
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    🎉 New here? Save <strong>20%</strong> with code: <strong>ES6LAB</strong> &nbsp;|&nbsp; Free shipping on orders over
+    $200
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">
+      <span class="brand-icon">⚡</span>
+      <span class="brand-name">ShopES6</span>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="nav-link active">Shop</a>
+      <a href="#" class="nav-link">Trending</a>
+      <a href="#" class="nav-link">New In</a>
+    </div>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">🔥 Best Sellers</div>
+      <h1>Premium Tech<br><span>Accessories</span></h1>
+      <p>Curated collection of high-end gadgets. Built with <code>ES6 Classes</code>.</p>
+      <a href="#products" class="hero-cta">Shop Now →</a>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-product-icon">💻</div>
+        <p>Laptops from</p>
+        <h3>$160</h3>
+      </div>
+      <div class="hero-card hero-card--accent">
+        <div class="hero-product-icon">🎮</div>
+        <p>Controllers from</p>
+        <h3>$100</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products-section" id="products">
+    <div class="section-header">
+      <h2>Best Selling Products</h2>
+      <p id="productCount">Loading…</p>
+    </div>
+    <div class="products-grid" id="productsGrid"></div>
+  </section>
+
+  <!-- Cart Modal Overlay -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-modal-header">
+        <h2>🛒 Your Cart</h2>
+        <button class="close-btn" id="closeCart">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty" id="cartEmpty">
+          <p>🛍️ Your cart is empty</p>
+          <span>Add some products to get started!</span>
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">$0</strong>
+        </div>
+        <div class="cart-actions">
+          <button class="btn-clear" id="clearCart">Clear All</button>
+          <button class="btn-checkout">Checkout →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-name">ShopES6</span>
+        <p>A lab demo powered by ES6 Classes, Maps &amp; Local Storage.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Shop</h4>
+        <a href="#">All Products</a>
+        <a href="#">Trending</a>
+        <a href="#">New In</a>
+      </div>
+      <div class="footer-links">
+        <h4>Support</h4>
+        <a href="#">FAQ</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Follow Us</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Twitter / X</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ShopES6 — ES6 Lab Task 2. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="task2product.js"></script>
+  <script type="module" src="task2.js"></script>
+</body>
+
+</html>

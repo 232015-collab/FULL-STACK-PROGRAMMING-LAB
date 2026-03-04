@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ES6 Promises Demo - Async user fetching with Promise .then/.catch pattern">
+    <title>Async User Fetch | ES6 Promises</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="task3.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <header class="header">
+            <div class="header-badge">ES6 Lab — Task 3</div>
+            <h1>Async User Fetch</h1>
+            <p>Promise-based data loading with <code>.then()</code> &amp; <code>.catch()</code></p>
+        </header>
+
+        <section class="status-section">
+            <div class="status-card" id="statusCard">
+                <div class="spinner" id="spinner"></div>
+                <p class="status-text" id="statusText">Fetching users from server…</p>
+            </div>
+        </section>
+
+        <section class="users-section" id="usersSection">
+            <div id="usersContainer" class="users-grid"></div>
+        </section>
+
+    </div>
+
+    <script src="task3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 1 — Dynamic Quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>🧠 JS Quiz</h1>
+    <p class="subtitle">Test your JavaScript knowledge — 5 questions</p>
+
+    <!-- Progress bar -->
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <!-- Questions rendered by script.js -->
+    <div id="quiz-area"></div>
+
+    <!-- Action buttons -->
+    <div class="btn-group">
+      <button class="btn btn-submit" onclick="submitQuiz()">✅ Submit Quiz.</button>
+      <button class="btn btn-reset"  onclick="resetQuiz()">🔄 Reset Quiz</button>
+    </div>
+
+    <!-- Result box (hidden initially, shown after submit) -->
+    <div id="result-box"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

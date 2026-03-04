@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ES6 Set Demo - Unique course registry demonstrating Set data structure">
+    <title>Course Registry | ES6 Set</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="task4.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <header class="header">
+            <div class="header-badge">ES6 Lab — Task 4</div>
+            <h1>Course Registry</h1>
+            <p>Using <code>Set</code> to store unique courses — duplicates are automatically removed</p>
+        </header>
+
+        <section class="stats-section">
+            <div class="stat-box" id="statBox">
+                <h2 id="totalCourses">0</h2>
+                <p>Unique Courses</p>
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <div id="coursesContainer" class="courses-grid"></div>
+        </section>
+
+        <section class="duplicate-note">
+            <div class="note-card">
+                <span class="note-icon">⚠️</span>
+                <p><strong>"JavaScript"</strong> was added twice — the <code>Set</code> automatically kept only one
+                    copy.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="task4.js"></script>
+</body>
+
+</html>
