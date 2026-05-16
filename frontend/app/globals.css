@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #e87722;
+  --primary-dark: #c45e0a;
+  --primary-light: #f5a652;
+  --accent: #f0a500;
+  --wood: #8B5E3C;
+  --dark: #2c2c2c;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f7f4;
+  color: #2c2c2c;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2.5 px-6 rounded transition-all duration-300 shadow hover:shadow-orange-300 active:scale-95;
+  }
+  .btn-secondary {
+    @apply border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-semibold py-2.5 px-6 rounded transition-all duration-300;
+  }
+  .btn-outline {
+    @apply border border-gray-400 text-gray-700 hover:border-orange-500 hover:text-orange-500 font-medium py-2 px-5 rounded transition-all duration-200 text-sm;
+  }
+  .card {
+    @apply bg-white shadow hover:shadow-md transition-all duration-300 overflow-hidden;
+  }
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-semibold;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all duration-200 bg-white text-sm;
+  }
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-gray-800 mb-1;
+  }
+  .section-subtitle {
+    @apply text-gray-500 text-sm mb-6;
+  }
+  .nav-link {
+    @apply text-gray-600 hover:text-orange-500 text-sm font-medium transition-colors duration-200;
+  }
+  .category-btn {
+    @apply px-4 py-1.5 text-sm font-medium border border-gray-300 hover:border-orange-400 hover:text-orange-500 rounded transition-all duration-200 whitespace-nowrap;
+  }
+  .category-btn-active {
+    @apply px-4 py-1.5 text-sm font-medium border border-orange-500 text-orange-500 bg-orange-50 rounded;
+  }
+  .add-to-basket {
+    @apply w-full bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold py-2 px-3 rounded transition-all duration-200 flex items-center justify-center gap-1;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #e87722; border-radius: 3px; }
+
+/* Hero diagonal orange strip */
+.hero-strip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #fff 50%, #fff8f2 50%);
+}
+
+/* Orange underline for headings */
+.orange-underline::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #e87722;
+  margin-top: 8px;
+}
+
+/* Product image zoom on hover */
+.product-img-wrap { overflow: hidden; }
+.product-img-wrap img { transition: transform 0.4s ease; }
+.product-img-wrap:hover img { transform: scale(1.06); }
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fadeIn 0.5s ease forwards; }
+
+/* Star colors */
+.star-filled { color: #f59e0b; }
+.star-empty { color: #d1d5db; }
+
+/* Sale badge */
+.sale-badge {
+  background: #e87722;
+  color: white;
+  font-weight: 700;
+  padding: 2px 8px;
+  font-size: 11px;
+  border-radius: 2px;
+}
+
+/* Top info bar */
+.top-bar {
+  background: #2c2c2c;
+  color: #ccc;
+  font-size: 12px;
+  padding: 6px 0;
+}
